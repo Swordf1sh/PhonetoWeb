@@ -28,7 +28,7 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
     NavigationController controller = Get.put(NavigationController());
 
     return PreferredSize(
-      preferredSize: screenSize,
+      preferredSize: Size.fromHeight(120),
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
         child: Expanded(
