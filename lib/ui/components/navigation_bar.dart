@@ -29,65 +29,68 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
 
     return PreferredSize(
       preferredSize: const Size.fromHeight(120),
-      child: Row(
-        children: [
-          TextButton.icon(
-              onPressed: widget.currentPage != homePageIndex
-                  ? () {
-                      Get.toNamed('/home');
-                    }
-                  : null,
-              icon: const Icon(Icons.home),
-              label: Text(str.homeButton.tr)),
-          const SizedBox(
-            width: 20,
-          ),
-          TextButton.icon(
-              onPressed: widget.currentPage != privacyPolicyPageIndex
-                  ? () {
-                      Get.toNamed('/privacy_policy');
-                    }
-                  : null,
-              icon: const Icon(Icons.policy),
-              label: Text(str.privacyButton.tr)),
-          const SizedBox(
-            width: 20,
-          ),
-          TextButton.icon(
-              onPressed: widget.currentPage != contactPageIndex
-                  ? () {
-                      Get.toNamed('/contact_us');
-                    }
-                  : null,
-              icon: Icon(Icons.contact_support),
-              label: Text(str.contactButton.tr)),
-          Expanded(child: Row()), // generate space between buttons
-          IconButton(
-            onPressed: () {
-              Get.updateLocale(const Locale('ka', 'GE'));
-            },
-            icon: Image.asset('icons/flags/georgia-flag.png'),
-            tooltip: 'Georgian',
-          ),
-          IconButton(
-            onPressed: () {
-              Get.updateLocale(const Locale('en', 'EN'));
-            },
-            icon: Image.asset('icons/flags/usa-flag.png'),
-            tooltip: 'English',
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          Obx(() => Switch(
-              value: controller.themeModeStatus.value,
-              onChanged: (val) {
-                controller.setThemeModeStatus(val);
-                Get.isDarkMode
-                    ? Get.changeThemeMode(ThemeMode.light)
-                    : Get.changeThemeMode(ThemeMode.dark);
-              }))
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Row(
+          children: [
+            TextButton.icon(
+                onPressed: widget.currentPage != homePageIndex
+                    ? () {
+                        Get.toNamed('/home');
+                      }
+                    : null,
+                icon: const Icon(Icons.home),
+                label: Text(str.homeButton.tr)),
+            const SizedBox(
+              width: 20,
+            ),
+            TextButton.icon(
+                onPressed: widget.currentPage != privacyPolicyPageIndex
+                    ? () {
+                        Get.toNamed('/privacy_policy');
+                      }
+                    : null,
+                icon: const Icon(Icons.policy),
+                label: Text(str.privacyButton.tr)),
+            const SizedBox(
+              width: 20,
+            ),
+            TextButton.icon(
+                onPressed: widget.currentPage != contactPageIndex
+                    ? () {
+                        Get.toNamed('/contact_us');
+                      }
+                    : null,
+                icon: Icon(Icons.contact_support),
+                label: Text(str.contactButton.tr)),
+            Expanded(child: Row()), // generate space between buttons
+            IconButton(
+              onPressed: () {
+                Get.updateLocale(const Locale('ka', 'GE'));
+              },
+              icon: Image.asset('icons/flags/georgia-flag.png'),
+              tooltip: 'Georgian',
+            ),
+            IconButton(
+              onPressed: () {
+                Get.updateLocale(const Locale('en', 'EN'));
+              },
+              icon: Image.asset('icons/flags/usa-flag.png'),
+              tooltip: 'English',
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Obx(() => Switch(
+                value: controller.themeModeStatus.value,
+                onChanged: (val) {
+                  controller.setThemeModeStatus(val);
+                  Get.isDarkMode
+                      ? Get.changeThemeMode(ThemeMode.light)
+                      : Get.changeThemeMode(ThemeMode.dark);
+                }))
+          ],
+        ),
       ),
     );
   }
