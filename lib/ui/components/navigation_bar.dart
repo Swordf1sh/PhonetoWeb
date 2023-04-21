@@ -7,6 +7,7 @@ import 'package:phoneto_web/routes/page_index.dart';
 import 'package:phoneto_web/core/translations/translation_keys.dart' as str;
 import 'package:phoneto_web/core/themes/theme.dart';
 import 'package:phoneto_web/controllers/navigation_controller.dart';
+import 'package:phoneto_web/constants/assets.dart';
 
 class NavigationBarWidget extends StatefulWidget
     implements PreferredSizeWidget {
@@ -68,14 +69,14 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
               onPressed: () {
                 Get.updateLocale(const Locale('ka', 'GE'));
               },
-              icon: Image.asset('georgia-flag.png'),
+              icon: Image.asset(Assets.assetsIconsFlagsGeorgiaFlag),
               tooltip: 'Georgian',
             ),
             IconButton(
               onPressed: () {
                 Get.updateLocale(const Locale('en', 'EN'));
               },
-              icon: Image.asset('usa-flag.png'),
+              icon: Image.asset(Assets.assetsIconsFlagsUsaFlag),
               tooltip: 'English',
             ),
             const SizedBox(
