@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:phoneto_web/ui/components/navigation_bar.dart';
 import 'package:phoneto_web/routes/page_index.dart';
+import 'package:phoneto_web/constants/privacy.dart';
 
 class PrivacyPolicyScreen extends StatelessWidget {
   const PrivacyPolicyScreen({super.key});
@@ -10,13 +11,17 @@ class PrivacyPolicyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: NavigationBarWidget(currentPage: privacyPolicyPageIndex),
+        appBar: const NavigationBarWidget(currentPage: privacyPolicyPageIndex),
         body: Center(
-          child: RichText(
-            textAlign: TextAlign.justify,
-            text: TextSpan(
-                text: 'test', style: Theme.of(context).textTheme.bodySmall),
-          ),
-        ));
+            child: Row(
+          children: [
+            Expanded(flex: 1, child: Container()),
+            const Expanded(
+              flex: 5,
+              child: PrivacyPolicy(),
+            ),
+            Expanded(flex: 1, child: Container()),
+          ],
+        )));
   }
 }
