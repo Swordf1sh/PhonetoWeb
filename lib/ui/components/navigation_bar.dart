@@ -68,14 +68,14 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
               onPressed: () {
                 Get.updateLocale(const Locale('ka', 'GE'));
               },
-              icon: Image.asset('icons/flags/georgia-flag.png'),
+              icon: Image.asset('georgia-flag.png'),
               tooltip: 'Georgian',
             ),
             IconButton(
               onPressed: () {
                 Get.updateLocale(const Locale('en', 'EN'));
               },
-              icon: Image.asset('icons/flags/usa-flag.png'),
+              icon: Image.asset('usa-flag.png'),
               tooltip: 'English',
             ),
             const SizedBox(
