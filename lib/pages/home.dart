@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:phoneto_web/ui/components/navigation_bar.dart';
 import 'package:phoneto_web/routes/page_index.dart';
+import 'package:phoneto_web/constants/assets.gen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -17,7 +16,16 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: NavigationBarWidget(currentPage: homePageIndex),
       body: Center(
-        child: Text('test widget'),
+        child: Stack(
+          children: [
+            Positioned.fill(child: Assets.images.frontpage.image(height: 700), ),
+            Positioned(
+              child: Container(
+              padding: const EdgeInsets.all(50),
+              child: Assets.icons.getGooglePlay.image())
+              )
+          ],
+        ),
       ),
     );
   }

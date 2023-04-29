@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:phoneto_web/routes/page_index.dart';
 import 'package:phoneto_web/core/translations/translation_keys.dart' as str;
 import 'package:phoneto_web/controllers/navigation_controller.dart';
-import 'package:phoneto_web/constants/assets.dart';
+import 'package:phoneto_web/constants/assets.gen.dart';
 import 'logo.dart';
 
 class NavigationBarWidget extends StatefulWidget
@@ -71,14 +71,14 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
                 onPressed: () {
                   Get.updateLocale(const Locale('ka', 'GE'));
                 },
-                icon: Image.asset(Assets.assetsIconsFlagsGeorgiaFlag),
+                icon: Assets.icons.flags.georgiaFlag.image(),
                 tooltip: 'Georgian',
               ),
               IconButton(
                 onPressed: () {
                   Get.updateLocale(const Locale('en', 'EN'));
                 },
-                icon: Image.asset(Assets.assetsIconsFlagsUsaFlag),
+                icon: Assets.icons.flags.usaFlag.image(),
                 tooltip: 'English',
               ),
               const SizedBox(

@@ -12,11 +12,9 @@ class PrivacyPolicy extends StatelessWidget {
         TextSpan(
             text: 'data_gathering_headline'.tr,
             style: Theme.of(context).textTheme.headlineSmall),
-        TextSpan(text: 'colecting data'),
         TextSpan(
-            text: 'asd'
-                'asd'
-                'asd')
+          style: Theme.of(context).textTheme.bodyMedium,
+          text: 'pp_h1'.tr)
       ]),
     );
   }

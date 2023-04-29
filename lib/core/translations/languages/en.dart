@@ -1,5 +1,6 @@
 import 'package:phoneto_web/core/translations/translation_keys.dart'
     as translation;
+import 'package:phoneto_web/core/translations/languages/privacy_en/privacy_policy_en.dart';
 
 class EN {
   Map<String, String> get translations => {
@@ -15,6 +16,9 @@ class EN {
         'send_message': 'Send message',
         'sent_success_title': 'Message Sent',
         'sent_success_message':
-            'Message sent succesfuly! We make action shortly'
+            'Message sent succesfuly! We make action shortly',
+
+        // privacy policy
+        'pp_h1': h1,
       };
 }
