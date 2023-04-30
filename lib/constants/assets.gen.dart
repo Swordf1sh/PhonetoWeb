@@ -14,26 +14,27 @@ class $AssetsIconsGen {
 
   $AssetsIconsFlagsGen get flags => const $AssetsIconsFlagsGen();
 
-  /// File path: assets/icons/get_google_play.png
-  AssetGenImage get getGooglePlay =>
-      const AssetGenImage('assets/icons/get_google_play.png');
+  /// File path: assets/icons/google-play-badge-en.png
+  AssetGenImage get googlePlayBadgeEn =>
+      const AssetGenImage('assets/icons/google-play-badge-en.png');
+
+  /// File path: assets/icons/google-play-badge-ge.png
+  AssetGenImage get googlePlayBadgeGe =>
+      const AssetGenImage('assets/icons/google-play-badge-ge.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [getGooglePlay];
+  List<AssetGenImage> get values => [googlePlayBadgeEn, googlePlayBadgeGe];
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
-  /// File path: assets/images/frontpage.png
-  AssetGenImage get frontpage =>
-      const AssetGenImage('assets/images/frontpage.png');
-
-  /// File path: assets/images/sc.jpg
-  AssetGenImage get sc => const AssetGenImage('assets/images/sc.jpg');
+  /// File path: assets/images/showcase.png
+  AssetGenImage get showcase =>
+      const AssetGenImage('assets/images/showcase.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [frontpage, sc];
+  List<AssetGenImage> get values => [showcase];
 }
 
 class $AssetsIconsFlagsGen {

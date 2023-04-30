@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       translations: PhonetoTranslations(),
       locale: const Locale('en', 'EN'),
       fallbackLocale: const Locale('en', 'EN'),
-      title: str.title.tr,
+      title: 'Phoneto - Shared Contacts',
       theme: lightTheme,
       darkTheme: darkTheme,
       initialRoute: '/home',
