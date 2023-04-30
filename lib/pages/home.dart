@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:phoneto_web/ui/components/navigation_bar.dart';
 import 'package:phoneto_web/routes/page_index.dart';
 import 'package:phoneto_web/constants/assets.gen.dart';
@@ -14,16 +15,25 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: NavigationBarWidget(currentPage: homePageIndex),
+      appBar: const NavigationBarWidget(currentPage: homePageIndex),
       body: Center(
         child: Stack(
           children: [
-            Positioned.fill(child: Assets.images.frontpage.image(height: 700), ),
-            Positioned(
-              child: Container(
-              padding: const EdgeInsets.all(50),
-              child: Assets.icons.getGooglePlay.image())
-              )
+            Positioned.fill(
+              child: Assets.images.showcase.image(height: 700),
+            ),
+            Align(
+                alignment: Alignment.center,
+                child: Container(
+                    height: 200,
+                    decoration: BoxDecoration(
+                        color: Theme.of(context).highlightColor,
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(20.0))),
+                    padding: const EdgeInsets.all(50),
+                    child: Get.locale == const Locale('en', 'EN')
+                        ? Assets.icons.googlePlayBadgeEn.image()
+                        : Assets.icons.googlePlayBadgeGe.image()))
           ],
         ),
       ),
