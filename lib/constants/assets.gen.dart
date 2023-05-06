@@ -37,6 +37,19 @@ class $AssetsImagesGen {
   List<AssetGenImage> get values => [showcase];
 }
 
+class $AssetsPrivacyGen {
+  const $AssetsPrivacyGen();
+
+  /// File path: assets/privacy/privacy_policy_en.md
+  String get privacyPolicyEn => 'assets/privacy/privacy_policy_en.md';
+
+  /// File path: assets/privacy/privacy_policy_ge.md
+  String get privacyPolicyGe => 'assets/privacy/privacy_policy_ge.md';
+
+  /// List of all assets
+  List<String> get values => [privacyPolicyEn, privacyPolicyGe];
+}
+
 class $AssetsIconsFlagsGen {
   const $AssetsIconsFlagsGen();
 
@@ -57,6 +70,7 @@ class Assets {
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsPrivacyGen privacy = $AssetsPrivacyGen();
 }
 
 class AssetGenImage {

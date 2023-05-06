@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:phoneto_web/pages/contact_us.dart';
 import 'package:phoneto_web/pages/home.dart';
 import 'package:phoneto_web/pages/privacy_policy.dart';
+import 'package:phoneto_web/pages/unregister.dart';
 
 appRoutes() => [
       GetPage(
@@ -18,5 +19,10 @@ appRoutes() => [
           name: '/contact_us',
           page: () => const ContactUsPage(),
           transition: Transition.fadeIn,
-          transitionDuration: const Duration(seconds: 1))
+          transitionDuration: const Duration(seconds: 1)),
+      GetPage(
+          name: '/unregister',
+          page: () => const UnregisterPage(),
+          transition: Transition.fadeIn,
+          transitionDuration: const Duration(seconds: 1)),
     ];

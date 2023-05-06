@@ -1,24 +1,18 @@
-import 'package:phoneto_web/core/translations/translation_keys.dart'
-    as translation;
-import 'package:phoneto_web/core/translations/languages/privacy_en/privacy_policy_en.dart';
+import 'package:phoneto_web/core/translations/translation_keys.dart';
 
 class EN {
   Map<String, String> get translations => {
-        translation.title: 'Phoneto - Shared Contacts',
-        translation.homeButton: 'Home',
-        translation.privacyButton: 'Privacy policy',
-        translation.contactButton: 'Contact us',
-        'contact_us': 'Contact form',
-        'contact_name': 'Name',
-        'contact_email': 'Email',
-        'contact_subject': 'Subject',
-        'contact_text': 'Text',
-        'send_message': 'Send message',
-        'sent_success_title': 'Message Sent',
-        'sent_success_message':
-            'Message sent succesfuly! We make action shortly',
-
-        // privacy policy
-        'pp_h1': h1,
+        title: 'Phoneto - Shared Contacts',
+        homeButton: 'Home',
+        privacyButton: 'Privacy policy',
+        contactButton: 'Contact us',
+        contactUs: 'Contact form',
+        contactName: 'Name',
+        contactEmail: 'Email',
+        contactSubject: 'Subject',
+        contactText: 'Text',
+        sendMessage: 'Send message',
+        sentSuccessTitle: 'Message Sent',
+        sentSuccessMessage: 'Message sent succesfuly! We make action shortly',
       };
 }
