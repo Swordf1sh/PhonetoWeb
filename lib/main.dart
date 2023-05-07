@@ -1,11 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:phoneto_web/constants/firebase_options.dart';
 import 'routes/routes.dart';
 import 'package:phoneto_web/core/themes/theme.dart';
 import 'package:phoneto_web/core/translations/translation.dart';
-import 'package:phoneto_web/core/translations/translation_keys.dart' as str;
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 

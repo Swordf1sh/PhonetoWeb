@@ -15,7 +15,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: NavigationBarWidget(
+      appBar: const NavigationBarWidget(
         currentPage: contactPageIndex,
       ),
       body: Center(
