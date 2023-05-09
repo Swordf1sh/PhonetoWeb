@@ -1,4 +1,4 @@
-import 'package:phoneto_web/core/translations/translation_keys.dart';
+import 'package:phoneto_web/constants/translation_keys.dart';
 
 class GE {
   Map<String, String> get translations => {
@@ -14,6 +14,7 @@ class GE {
         sendMessage: 'შეტყობინების გაგზავნა',
         sentSuccessTitle: 'შეტყობინება გაგზავნილია',
         sentSuccessMessage:
-            'შეტყობინება გაგზავნილია! თქვენ მიიღებთ პასუხს უმოკლეს დროში'
+            'შეტყობინება გაგზავნილია! თქვენ მიიღებთ პასუხს უმოკლეს დროში',
+        unregisterHeadline: 'ნომრის საძიებო სისტემიდან ამოღება',
       };
 }

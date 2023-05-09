@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:phoneto_web/routes/page_index.dart';
-import 'package:phoneto_web/core/translations/translation_keys.dart' as str;
+import 'package:phoneto_web/constants/translation_keys.dart' as str;
 import 'package:phoneto_web/controllers/navigation_controller.dart';
 import 'package:phoneto_web/constants/assets.gen.dart';
 import 'logo.dart';
@@ -30,9 +30,8 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Container(
-          decoration: BoxDecoration(
-            color: Theme.of(context).secondaryHeaderColor
-          ),
+          decoration:
+              BoxDecoration(color: Theme.of(context).secondaryHeaderColor),
           child: Row(
             children: [
               LogoHeader(),

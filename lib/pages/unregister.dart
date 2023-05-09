@@ -1,7 +1,7 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:phoneto_web/constants/translation_keys.dart';
 import 'package:phoneto_web/repositories/otp.dart';
 import '../ui/components/navigation_bar.dart';
 import '../controllers/unregister_contoller.dart';
@@ -39,8 +39,9 @@ class _UnregisterPageState extends State<UnregisterPage> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            'unregister_headline'.tr,
+                            unregisterHeadline.tr,
                             style: Theme.of(context).textTheme.headlineMedium,
+                            textAlign: TextAlign.center,
                           ),
                           Text(
                             'unregister_info_message'.tr,
@@ -65,8 +66,10 @@ class _UnregisterPageState extends State<UnregisterPage> {
                                   // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
                                   initialSelection: 'GE',
                                   favorite: const ['+995', 'GE'],
+                                  dialogBackgroundColor:
+                                      Theme.of(context).dialogBackgroundColor,
                                   dialogTextStyle:
-                                      TextStyle(color: Colors.black),
+                                      Theme.of(context).textTheme.bodyLarge,
                                   // optional. Shows only country name and flag
                                   showCountryOnly: false,
                                   // optional. Shows only country name and flag when popup is closed.

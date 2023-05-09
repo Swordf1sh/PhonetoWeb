@@ -14,3 +14,6 @@ const contactText = 'contact_text';
 const sendMessage = 'send_message';
 const sentSuccessTitle = 'sent_success_title';
 const sentSuccessMessage = 'sent_success_message';
+
+// number unregister form
+const unregisterHeadline = 'unregister_headline';

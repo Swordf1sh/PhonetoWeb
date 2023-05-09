@@ -1,4 +1,4 @@
-import 'package:phoneto_web/core/translations/translation_keys.dart';
+import 'package:phoneto_web/constants/translation_keys.dart';
 
 class EN {
   Map<String, String> get translations => {
