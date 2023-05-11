@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:phoneto_web/routes/page_index.dart';
-import 'package:phoneto_web/constants/translation_keys.dart' as str;
+import 'package:phoneto_web/constants/translation_keys.dart';
 import 'package:phoneto_web/controllers/navigation_controller.dart';
 import 'package:phoneto_web/constants/assets.gen.dart';
 import 'logo.dart';
@@ -34,37 +34,26 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
               BoxDecoration(color: Theme.of(context).secondaryHeaderColor),
           child: Row(
             children: [
-              LogoHeader(),
-              TextButton.icon(
+              const LogoHeader(),
+              FilledButton.icon(
                   onPressed: widget.currentPage != homePageIndex
                       ? () {
                           Get.toNamed('/home');
                         }
                       : null,
                   icon: const Icon(Icons.home),
-                  label: Text(str.homeButton.tr)),
+                  label: Text(trNavHomeButton.tr)),
               const SizedBox(
                 width: 20,
               ),
-              TextButton.icon(
-                  onPressed: widget.currentPage != privacyPolicyPageIndex
-                      ? () {
-                          Get.toNamed('/privacy_policy');
-                        }
-                      : null,
-                  icon: const Icon(Icons.policy),
-                  label: Text(str.privacyButton.tr)),
-              const SizedBox(
-                width: 20,
-              ),
-              TextButton.icon(
+              FilledButton.icon(
                   onPressed: widget.currentPage != contactPageIndex
                       ? () {
                           Get.toNamed('/contact_us');
                         }
                       : null,
-                  icon: Icon(Icons.contact_support),
-                  label: Text(str.contactButton.tr)),
+                  icon: const Icon(Icons.contact_support),
+                  label: Text(trNavContactButton.tr)),
               Expanded(child: Row()), // generate space between buttons
               IconButton(
                 onPressed: () {

@@ -1,19 +1,26 @@
-const title = 'title';
+const trTitle = 'title';
 
 // navigation buttons
-const homeButton = 'home-button';
-const privacyButton = 'privacy_button';
-const contactButton = 'contact_button';
+const trNavHomeButton = 'home-button';
+const trNavPrivacyButton = 'privacy_button';
+const trNavContactButton = 'contact_button';
+const trNavUnregisterButton = 'unregister_button';
 
 // contact form
-const contactUs = 'contact_us';
-const contactName = 'contact_name';
-const contactEmail = 'contact_email';
-const contactSubject = 'contact_subject';
-const contactText = 'contact_text';
-const sendMessage = 'send_message';
-const sentSuccessTitle = 'sent_success_title';
-const sentSuccessMessage = 'sent_success_message';
+const trContactHeader = 'contact_us';
+const trContactName = 'contact_name';
+const trContactEmail = 'contact_email';
+const trContactSubject = 'contact_subject';
+const trContactText = 'contact_text';
+const trContactSendButton = 'send_message';
+const trContactSentSuccessTitle = 'sent_success_title';
+const trContactSentSuccessMessage = 'sent_success_message';
 
 // number unregister form
-const unregisterHeadline = 'unregister_headline';
+const trUnregisterHeadline = 'unregister_headline';
+const trUnregisterInfo = 'unregister_info';
+const trUnregisterPhoneNumber = 'phone_number';
+const trUnregisterSendOtp = 'send_otp';
+const trUnregisterOtpInfo = 'otp_info';
+const trUnregisterOtpCode = 'otp_code';
+const trUnregisterSubmitOtp = 'submit_otp';

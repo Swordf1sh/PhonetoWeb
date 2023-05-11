@@ -2,17 +2,28 @@ import 'package:phoneto_web/constants/translation_keys.dart';
 
 class EN {
   Map<String, String> get translations => {
-        title: 'Phoneto - Shared Contacts',
-        homeButton: 'Home',
-        privacyButton: 'Privacy policy',
-        contactButton: 'Contact us',
-        contactUs: 'Contact form',
-        contactName: 'Name',
-        contactEmail: 'Email',
-        contactSubject: 'Subject',
-        contactText: 'Text',
-        sendMessage: 'Send message',
-        sentSuccessTitle: 'Message Sent',
-        sentSuccessMessage: 'Message sent succesfuly! We make action shortly',
+        trTitle: 'Phoneto - Shared Contacts',
+        trNavHomeButton: 'Home',
+        trNavPrivacyButton: 'Privacy policy',
+        trNavContactButton: 'Contact us',
+        trNavUnregisterButton: 'Unregister number',
+        trContactHeader: 'Contact form',
+        trContactName: 'Name',
+        trContactEmail: 'Email',
+        trContactSubject: 'Subject',
+        trContactText: 'Text',
+        trContactSendButton: 'Send message',
+        trContactSentSuccessTitle: 'Message Sent',
+        trContactSentSuccessMessage:
+            'Message sent succesfuly! We make action shortly',
+        trUnregisterHeadline: 'Remove number from the system',
+        trUnregisterInfo:
+            'To remove a number from the system, you need to specify your phone number, by pressing the button a one-time code will be sent to the indicated number',
+        trUnregisterPhoneNumber: 'Phone number',
+        trUnregisterSendOtp: 'Send code',
+        trUnregisterSubmitOtp: 'Submit code',
+        trUnregisterOtpCode: 'code',
+        trUnregisterOtpInfo:
+            'A one-time code will be sent as a message to the specified number, to confirm the owner of the number, enter the specified code in the field indicated below and press the button'
       };
 }
