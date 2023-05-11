@@ -35,7 +35,7 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
           child: Row(
             children: [
               const LogoHeader(),
-              FilledButton.icon(
+              TextButton.icon(
                   onPressed: widget.currentPage != homePageIndex
                       ? () {
                           Get.toNamed('/home');
@@ -46,7 +46,7 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
               const SizedBox(
                 width: 20,
               ),
-              FilledButton.icon(
+              TextButton.icon(
                   onPressed: widget.currentPage != contactPageIndex
                       ? () {
                           Get.toNamed('/contact_us');

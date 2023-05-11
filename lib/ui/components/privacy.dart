@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:markdown/markdown.dart';
 
 import '../../constants/assets.gen.dart';
@@ -19,7 +20,9 @@ class PrivacyPolicy extends StatelessWidget {
           if (!snapshot.hasData) {
             return const CircularProgressIndicator();
           }
-          return Markdown(data: snapshot.data.toString());
+          return Markdown(
+            data: snapshot.data.toString(),
+          );
         });
   }
 }

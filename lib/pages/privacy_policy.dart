@@ -14,7 +14,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: const NavigationBarWidget(currentPage: privacyPolicyPageIndex),
-        bottomSheet: BottomMenu(),
+        bottomSheet: const BottomMenu(),
         body: Padding(
           padding: const EdgeInsets.all(36.0),
           child: Center(
