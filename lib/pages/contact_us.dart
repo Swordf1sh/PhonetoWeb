@@ -26,10 +26,6 @@ class _ContactUsPageState extends State<ContactUsPage> {
             child: Row(
           children: [
             Expanded(
-              flex: 2,
-              child: Container(),
-            ),
-            Expanded(
               flex: 3,
               child: Form(
                 child: Column(
@@ -95,10 +91,6 @@ class _ContactUsPageState extends State<ContactUsPage> {
                   ],
                 ),
               ),
-            ),
-            Expanded(
-              flex: 2,
-              child: Container(),
             ),
           ],
         )),

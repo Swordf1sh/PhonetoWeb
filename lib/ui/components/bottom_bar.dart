@@ -9,27 +9,23 @@ class BottomMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration:
-          BoxDecoration(color: Theme.of(context).colorScheme.primaryContainer),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Copyright(),
-            TextButton(
-                onPressed: () {
-                  Get.toNamed('/privacy_policy');
-                },
-                child: Text(trNavPrivacyButton.tr)),
-            TextButton(
-                onPressed: () {
-                  Get.toNamed('/unregister');
-                },
-                child: Text(trNavUnregisterButton.tr)),
-          ],
-        ),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Copyright(),
+          TextButton(
+              onPressed: () {
+                Get.toNamed('/privacy_policy');
+              },
+              child: Text(trNavPrivacyButton.tr)),
+          TextButton(
+              onPressed: () {
+                Get.toNamed('/unregister');
+              },
+              child: Text(trNavUnregisterButton.tr)),
+        ],
       ),
     );
   }
