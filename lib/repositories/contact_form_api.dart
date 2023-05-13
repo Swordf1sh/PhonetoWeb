@@ -4,7 +4,7 @@ import 'package:phoneto_web/repositories/data/models/contact_form_model.dart';
 import '../controllers/contact_form_controller.dart';
 import 'package:http/http.dart' as http;
 
-Future<http.Response> submitMessage() async {
+Future<void> submitMessage() async {
   final controller = Get.put(ContactFormController());
 
   ContactFormModel contactFormModel = ContactFormModel(
@@ -13,6 +13,9 @@ Future<http.Response> submitMessage() async {
       subject: controller.getSubject(),
       text: controller.getText());
 
-  return await http.post(Uri.http(apiBaseUrl, apiContactFormEndpoint),
+  http.Response response = await http.post(
+      Uri.http(apiBaseUrl, apiContactFormEndpoint),
       body: contactFormModel.toJson());
+
+  controller.setStatusCode(response.statusCode);
 }
