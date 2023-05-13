@@ -5,6 +5,8 @@ import 'package:phoneto_web/ui/components/navigation_bar.dart';
 import 'package:phoneto_web/routes/page_index.dart';
 import 'package:get/get.dart';
 
+import '../controllers/validators/contact_form_validators.dart';
+
 class ContactUsPage extends StatefulWidget {
   const ContactUsPage({super.key});
 
@@ -13,6 +15,8 @@ class ContactUsPage extends StatefulWidget {
 }
 
 class _ContactUsPageState extends State<ContactUsPage> {
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,6 +32,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
             Expanded(
               flex: 3,
               child: Form(
+                key: _formKey,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -39,6 +44,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                       height: 20,
                     ),
                     TextFormField(
+                      validator: validateName,
                       decoration: InputDecoration(
                           label: Text('contact_name'.tr),
                           icon: const Icon(Icons.person),
@@ -48,9 +54,10 @@ class _ContactUsPageState extends State<ContactUsPage> {
                       height: 10,
                     ),
                     TextFormField(
+                      validator: validateEmail,
                       decoration: InputDecoration(
                           label: Text('contact_email'.tr),
-                          icon: Icon(Icons.email),
+                          icon: const Icon(Icons.email),
                           filled: true),
                     ),
                     const SizedBox(
@@ -69,6 +76,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                     TextFormField(
                       minLines: 5,
                       maxLines: 10,
+                      validator: validateText,
                       decoration: InputDecoration(
                           label: Text('contact_text'.tr),
                           icon: const Icon(Icons.text_fields),
@@ -79,12 +87,14 @@ class _ContactUsPageState extends State<ContactUsPage> {
                     ),
                     FilledButton.icon(
                         onPressed: () {
-                          Get.snackbar('sent_success_title'.tr,
-                              'sent_success_message'.tr,
-                              snackPosition: SnackPosition.BOTTOM,
-                              backgroundColor: Colors.green,
-                              icon: const Icon(Icons.check),
-                              margin: const EdgeInsets.all(20));
+                          if (_formKey.currentState!.validate()) {
+                            Get.snackbar('sent_success_title'.tr,
+                                'sent_success_message'.tr,
+                                snackPosition: SnackPosition.BOTTOM,
+                                backgroundColor: Colors.green,
+                                icon: const Icon(Icons.check),
+                                margin: const EdgeInsets.all(20));
+                          }
                         },
                         icon: const Icon(Icons.send),
                         label: Text('send_message'.tr))

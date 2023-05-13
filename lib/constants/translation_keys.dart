@@ -24,3 +24,8 @@ const trUnregisterSendOtp = 'send_otp';
 const trUnregisterOtpInfo = 'otp_info';
 const trUnregisterOtpCode = 'otp_code';
 const trUnregisterSubmitOtp = 'submit_otp';
+
+// validators
+const trValidateName = 'validate_name';
+const trValidateEmail = 'validate_email';
+const trValidateText = 'validate_text';
