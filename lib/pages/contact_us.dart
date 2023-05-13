@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:phoneto_web/controllers/contact_form_controller.dart';
+import 'package:phoneto_web/repositories/contact_form_api.dart';
 import 'package:phoneto_web/ui/components/bottom_bar.dart';
 import 'package:phoneto_web/ui/components/navigation_bar.dart';
 import 'package:phoneto_web/routes/page_index.dart';
@@ -16,7 +18,7 @@ class ContactUsPage extends StatefulWidget {
 }
 
 class _ContactUsPageState extends State<ContactUsPage> {
-  final _formKey = GlobalKey<FormState>();
+  final controller = Get.put(ContactFormController());
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
             Expanded(
               flex: 3,
               child: Form(
-                key: _formKey,
+                key: controller.formKey.value,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -45,6 +47,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                       height: 20,
                     ),
                     TextFormField(
+                      controller: controller.nameController.value,
                       validator: validateName,
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       decoration: InputDecoration(
@@ -56,6 +59,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                       height: 10,
                     ),
                     TextFormField(
+                      controller: controller.emailController.value,
                       validator: validateEmail,
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       decoration: InputDecoration(
@@ -67,6 +71,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                       height: 10,
                     ),
                     TextFormField(
+                      controller: controller.subjectController.value,
                       validator: validateSubject,
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       decoration: InputDecoration(
@@ -81,6 +86,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                     TextFormField(
                       minLines: 5,
                       maxLines: 10,
+                      controller: controller.textController.value,
                       validator: validateText,
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       decoration: InputDecoration(
@@ -93,7 +99,11 @@ class _ContactUsPageState extends State<ContactUsPage> {
                     ),
                     FilledButton.icon(
                         onPressed: () {
-                          if (_formKey.currentState!.validate()) {
+                          if (controller.formKey.value.currentState!
+                              .validate()) {
+                            submitMessage();
+                            controller.formKey.value.currentState!.reset();
+
                             Get.snackbar(trContactSentSuccessTitle.tr,
                                 trContactSentSuccessMessage.tr,
                                 snackPosition: SnackPosition.BOTTOM,
@@ -103,7 +113,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                           }
                         },
                         icon: const Icon(Icons.send),
-                        label: Text('send_message'.tr))
+                        label: Text(trContactSendButton.tr))
                   ],
                 ),
               ),

@@ -21,8 +21,6 @@ class NavigationBarWidget extends StatefulWidget
 class _NavigationBarWidgetState extends State<NavigationBarWidget> {
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
-
     NavigationController controller = Get.put(NavigationController());
 
     return PreferredSize(
@@ -54,7 +52,7 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
                       : null,
                   icon: const Icon(Icons.contact_support),
                   label: Text(trNavContactButton.tr)),
-              Expanded(child: Row()), // generate space between buttons
+              const Expanded(child: Row()), // generate space between buttons
               IconButton(
                 onPressed: () {
                   Get.updateLocale(const Locale('ka', 'GE'));
