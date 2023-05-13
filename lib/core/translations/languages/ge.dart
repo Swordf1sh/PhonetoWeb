@@ -25,8 +25,10 @@ class GE {
         trUnregisterOtpCode: 'კოდი',
         trUnregisterOtpInfo:
             'მითითებულ ნომერზე შეტყობინების სახით გამოიგზავნება ერთჯერადი კოდი, ნომრის მფლობელის დასადასტურებლად აღნიშნული კოდი შეიყვანეთ ქვემოთ მითითებულ ველში და დააჭირეთ ღილაკს',
-        trValidateName: 'გთხოვთ შეავსეთ სახელის ველი',
-        trValidateEmail: 'გთხოვთ შეავსეთ ელ-ფოსტის ველი',
-        trValidateText: 'გთხოვთ აკრიფოთ ტექსტი',
+        trValidateEmptyName: 'გთხოვთ შეავსეთ სახელის ველი',
+        trValidateEmptyEmail: 'გთხოვთ შეავსეთ ელ-ფოსტის ველი',
+        trValidateInvalidEmail: 'ელ-ფოსტა არასწორია',
+        trValidateEmptySubject: 'გთხოვთ შეავსეთ სათაურის ველი',
+        trValidateEmptyText: 'გთხოვთ აკრიფოთ ტექსტი',
       };
 }

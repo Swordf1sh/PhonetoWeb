@@ -5,6 +5,7 @@ import 'package:phoneto_web/ui/components/navigation_bar.dart';
 import 'package:phoneto_web/routes/page_index.dart';
 import 'package:get/get.dart';
 
+import '../constants/translation_keys.dart';
 import '../controllers/validators/contact_form_validators.dart';
 
 class ContactUsPage extends StatefulWidget {
@@ -37,7 +38,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      'contact_us'.tr,
+                      trContactHeader.tr,
                       style: Theme.of(context).textTheme.headlineLarge,
                     ),
                     const SizedBox(
@@ -45,8 +46,9 @@ class _ContactUsPageState extends State<ContactUsPage> {
                     ),
                     TextFormField(
                       validator: validateName,
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
                       decoration: InputDecoration(
-                          label: Text('contact_name'.tr),
+                          label: Text(trContactName.tr),
                           icon: const Icon(Icons.person),
                           filled: true),
                     ),
@@ -55,8 +57,9 @@ class _ContactUsPageState extends State<ContactUsPage> {
                     ),
                     TextFormField(
                       validator: validateEmail,
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
                       decoration: InputDecoration(
-                          label: Text('contact_email'.tr),
+                          label: Text(trContactEmail.tr),
                           icon: const Icon(Icons.email),
                           filled: true),
                     ),
@@ -64,8 +67,10 @@ class _ContactUsPageState extends State<ContactUsPage> {
                       height: 10,
                     ),
                     TextFormField(
+                      validator: validateSubject,
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
                       decoration: InputDecoration(
-                        label: Text('contact_subject'.tr),
+                        label: Text(trContactSubject.tr),
                         icon: const Icon(Icons.subject),
                         filled: true,
                       ),
@@ -77,8 +82,9 @@ class _ContactUsPageState extends State<ContactUsPage> {
                       minLines: 5,
                       maxLines: 10,
                       validator: validateText,
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
                       decoration: InputDecoration(
-                          label: Text('contact_text'.tr),
+                          label: Text(trContactText.tr),
                           icon: const Icon(Icons.text_fields),
                           filled: true),
                     ),
@@ -88,8 +94,8 @@ class _ContactUsPageState extends State<ContactUsPage> {
                     FilledButton.icon(
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
-                            Get.snackbar('sent_success_title'.tr,
-                                'sent_success_message'.tr,
+                            Get.snackbar(trContactSentSuccessTitle.tr,
+                                trContactSentSuccessMessage.tr,
                                 snackPosition: SnackPosition.BOTTOM,
                                 backgroundColor: Colors.green,
                                 icon: const Icon(Icons.check),

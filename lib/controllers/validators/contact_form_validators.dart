@@ -1,10 +1,18 @@
 import 'package:get/get.dart';
 import 'package:phoneto_web/constants/translation_keys.dart';
 
+extension EmailValidator on String {
+  bool isValidEmail() {
+    return RegExp(
+            r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
+        .hasMatch(this);
+  }
+}
+
 String? validateName(String? name) {
   // add some logics for validate name
   if (name == null || name.isEmpty) {
-    return trValidateName.tr;
+    return trValidateEmptyName.tr;
   }
   return null;
 }
@@ -12,7 +20,17 @@ String? validateName(String? name) {
 String? validateEmail(String? name) {
   // add some logics for validate name
   if (name == null || name.isEmpty) {
-    return trValidateEmail.tr;
+    return trValidateEmptyEmail.tr;
+  } else if (!name.isEmail) {
+    return trValidateInvalidEmail.tr;
+  }
+  return null;
+}
+
+String? validateSubject(String? name) {
+  // add some logics for validate name
+  if (name == null || name.isEmpty) {
+    return trValidateEmptyEmail.tr;
   }
   return null;
 }
@@ -20,7 +38,7 @@ String? validateEmail(String? name) {
 String? validateText(String? name) {
   // add some logics for validate name
   if (name == null || name.isEmpty) {
-    return trValidateText.tr;
+    return trValidateEmptyText.tr;
   }
   return null;
 }

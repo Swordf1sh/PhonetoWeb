@@ -26,6 +26,8 @@ const trUnregisterOtpCode = 'otp_code';
 const trUnregisterSubmitOtp = 'submit_otp';
 
 // validators
-const trValidateName = 'validate_name';
-const trValidateEmail = 'validate_email';
-const trValidateText = 'validate_text';
+const trValidateEmptyName = 'empty_name';
+const trValidateEmptyEmail = 'empty_email';
+const trValidateInvalidEmail = 'invalid_email';
+const trValidateEmptySubject = 'empty_subject';
+const trValidateEmptyText = 'empty_text';
