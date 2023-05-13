@@ -24,6 +24,9 @@ class EN {
         trUnregisterSubmitOtp: 'Submit code',
         trUnregisterOtpCode: 'code',
         trUnregisterOtpInfo:
-            'A one-time code will be sent as a message to the specified number, to confirm the owner of the number, enter the specified code in the field indicated below and press the button'
+            'A one-time code will be sent as a message to the specified number, to confirm the owner of the number, enter the specified code in the field indicated below and press the button',
+        trValidateName: 'Please fill name field',
+        trValidateEmail: 'Please fill email field',
+        trValidateText: 'Please fill text field',
       };
 }
