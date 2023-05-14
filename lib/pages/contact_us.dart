@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:phoneto_web/controllers/contact_form_controller.dart';
 import 'package:phoneto_web/repositories/contact_form_api.dart';
 import 'package:phoneto_web/ui/components/bottom_bar.dart';
 import 'package:phoneto_web/ui/components/navigation_bar.dart';
 import 'package:phoneto_web/routes/page_index.dart';
 import 'package:get/get.dart';
+import 'package:phoneto_web/ui/components/snackbars.dart';
 
 import '../constants/translation_keys.dart';
 import '../controllers/validators/contact_form_validators.dart';
@@ -32,6 +32,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
         child: Center(
             child: Row(
           children: [
+            Expanded(flex: 1, child: Container()),
             Expanded(
               flex: 3,
               child: Form(
@@ -104,27 +105,9 @@ class _ContactUsPageState extends State<ContactUsPage> {
                             submitMessage().then((resp) => {
                                   controller.formKey.value.currentState!
                                       .reset(),
-                                  if (resp.statusCode == 201)
-                                    {
-                                      Get.snackbar(trContactSentSuccessTitle.tr,
-                                          trContactSentSuccessMessage.tr,
-                                          snackPosition: SnackPosition.BOTTOM,
-                                          backgroundColor: Colors.green,
-                                          icon: const Icon(Icons.check),
-                                          margin: const EdgeInsets.all(20))
-                                    }
-                                  else
-                                    {
-                                      Get.snackbar(
-                                          'ERROR CODE: ${resp.statusCode}',
-                                          'error_message'.tr,
-                                          snackPosition: SnackPosition.BOTTOM,
-                                          backgroundColor: Theme.of(context)
-                                              .colorScheme
-                                              .error,
-                                          icon: const Icon(Icons.error),
-                                          margin: const EdgeInsets.all(20))
-                                    }
+                                  resp.statusCode == 201
+                                      ? showSuccessContactFormMessage()
+                                      : showErrorContactFormMessage(201)
                                 });
                           }
                         },
@@ -134,6 +117,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
                 ),
               ),
             ),
+            Expanded(flex: 1, child: Container()),
           ],
         )),
       ),

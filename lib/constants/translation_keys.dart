@@ -15,6 +15,8 @@ const trContactText = 'contact_text';
 const trContactSendButton = 'send_message';
 const trContactSentSuccessTitle = 'sent_success_title';
 const trContactSentSuccessMessage = 'sent_success_message';
+const trContactSentErrorTitle = 'sent_error_title';
+const trContactSentErrorMessage = 'sent_error_message';
 
 // number unregister form
 const trUnregisterHeadline = 'unregister_headline';

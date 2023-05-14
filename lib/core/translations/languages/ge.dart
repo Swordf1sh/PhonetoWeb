@@ -16,6 +16,8 @@ class GE {
         trContactSentSuccessTitle: 'შეტყობინება გაგზავნილია',
         trContactSentSuccessMessage:
             'შეტყობინება გაგზავნილია! თქვენ მიიღებთ პასუხს უმოკლეს დროში',
+        trContactSentErrorTitle: 'დაფიქსირდა შეცდომა!',
+        trContactSentErrorMessage: 'შეცდომის კოდი: ',
         trUnregisterHeadline: 'ნომრის საძიებო სისტემიდან ამოღება',
         trUnregisterInfo:
             'ნომრის სისტემიდან ამოსაღებად საჭიროა მიუთითოთ თქვენი ტელეფონის ნომერი, ღილაკზე დაჭერით მითითებულ ნომერზე გამოიგზავნება ერთჯერადი კოდი',

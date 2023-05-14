@@ -16,6 +16,8 @@ class EN {
         trContactSentSuccessTitle: 'Message Sent',
         trContactSentSuccessMessage:
             'Message sent succesfuly! We make action shortly',
+        trContactSentErrorTitle: 'Error occured!',
+        trContactSentErrorMessage: 'Error CODE: ',
         trUnregisterHeadline: 'Remove number from the system',
         trUnregisterInfo:
             'To remove a number from the system, you need to specify your phone number, by pressing the button a one-time code will be sent to the indicated number',
