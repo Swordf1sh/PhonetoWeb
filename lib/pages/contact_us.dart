@@ -101,15 +101,31 @@ class _ContactUsPageState extends State<ContactUsPage> {
                         onPressed: () {
                           if (controller.formKey.value.currentState!
                               .validate()) {
-                            submitMessage();
-                            controller.formKey.value.currentState!.reset();
-
-                            Get.snackbar(trContactSentSuccessTitle.tr,
-                                trContactSentSuccessMessage.tr,
-                                snackPosition: SnackPosition.BOTTOM,
-                                backgroundColor: Colors.green,
-                                icon: const Icon(Icons.check),
-                                margin: const EdgeInsets.all(20));
+                            submitMessage().then((resp) => {
+                                  controller.formKey.value.currentState!
+                                      .reset(),
+                                  if (resp.statusCode == 201)
+                                    {
+                                      Get.snackbar(trContactSentSuccessTitle.tr,
+                                          trContactSentSuccessMessage.tr,
+                                          snackPosition: SnackPosition.BOTTOM,
+                                          backgroundColor: Colors.green,
+                                          icon: const Icon(Icons.check),
+                                          margin: const EdgeInsets.all(20))
+                                    }
+                                  else
+                                    {
+                                      Get.snackbar(
+                                          'ERROR CODE: ${resp.statusCode}',
+                                          'error_message'.tr,
+                                          snackPosition: SnackPosition.BOTTOM,
+                                          backgroundColor: Theme.of(context)
+                                              .colorScheme
+                                              .error,
+                                          icon: const Icon(Icons.error),
+                                          margin: const EdgeInsets.all(20))
+                                    }
+                                });
                           }
                         },
                         icon: const Icon(Icons.send),
