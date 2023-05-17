@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:phoneto_web/ui/components/navigation_bar.dart';
-import 'package:phoneto_web/routes/page_index.dart';
+import 'package:phoneto_web/constants/page_index.dart';
 import 'package:phoneto_web/constants/assets.gen.dart';
 
 import '../ui/components/bottom_bar.dart';

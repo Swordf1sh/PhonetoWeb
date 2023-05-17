@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:phoneto_web/routes/page_index.dart';
+import 'package:phoneto_web/constants/page_index.dart';
 import 'package:phoneto_web/constants/translation_keys.dart';
 import 'package:phoneto_web/controllers/navigation_controller.dart';
 import 'package:phoneto_web/constants/assets.gen.dart';

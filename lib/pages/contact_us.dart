@@ -3,7 +3,7 @@ import 'package:phoneto_web/controllers/contact_form_controller.dart';
 import 'package:phoneto_web/repositories/contact_form_api.dart';
 import 'package:phoneto_web/ui/components/bottom_bar.dart';
 import 'package:phoneto_web/ui/components/navigation_bar.dart';
-import 'package:phoneto_web/routes/page_index.dart';
+import 'package:phoneto_web/constants/page_index.dart';
 import 'package:get/get.dart';
 import 'package:phoneto_web/ui/components/snackbars.dart';
 
